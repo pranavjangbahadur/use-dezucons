@@ -1,0 +1,40 @@
+{
+  "name": "use-dezucons",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pixel faces whose shape, palette, and emotion combine.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "site": "vite build --config vite.site.config.ts",
+    "build": "vite build && tsc -p tsconfig.build.json && node scripts/rewrite-declarations.mjs",
+    "test": "node --experimental-strip-types --test test/*.test.ts"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "gifenc": "^1.0.3",
+    "mp4-muxer": "^5.2.2",
+    "react": "19.1.2",
+    "react-dom": "19.1.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}
