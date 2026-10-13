@@ -1,7 +1,6 @@
 {
   "name": "use-dezucons",
   "version": "0.1.0",
-  "private": true,
   "description": "Pixel faces whose shape, palette, and emotion combine.",
   "type": "module",
   "main": "./dist/index.js",
